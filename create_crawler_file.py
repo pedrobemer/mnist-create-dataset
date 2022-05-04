@@ -31,7 +31,7 @@ with open('/home/pedrobemer/Git/mnist-create-dataset/mnist_database.csv', 'w') a
             label_images_files = os.listdir(path + "/" + dir + "/" + label)
             for images in label_images_files:
 
-                    s3_location = "s3://itau-corp-raw-us-east-1-360578360405/mnist/" + \
+                    s3_location = "s3://bucket_location/mnist/" + \
                         dir + "/" + label + "-" + images
                     row = [idx, label, dir, s3_location]
                     print(row)
